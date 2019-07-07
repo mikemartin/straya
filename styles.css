@@ -1,0 +1,176 @@
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ *
+ * If using `postcss-import`, use this import instead:
+ *
+ * @import "tailwindcss/preflight";
+ */
+ @tailwind preflight;
+
+ /**
+  * This injects any component classes registered by plugins.
+  *
+  * If using `postcss-import`, use this import instead:
+  *
+  * @import "tailwindcss/components";
+  */
+ @tailwind components;
+ 
+@import url("//hello.myfonts.net/count/38fac7");
+@font-face {font-family: 'MontrealSerial';font-weight: bold;font-style: normal;src: url('webfonts/38FAC7_0_0.eot');src: url('webfonts/38FAC7_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/38FAC7_0_0.woff2') format('woff2'),url('webfonts/38FAC7_0_0.woff') format('woff'),url('webfonts/38FAC7_0_0.ttf') format('truetype');}
+@font-face {font-family: 'MontrealSerial';font-weight: bold;font-style: italic;src: url('webfonts/38FAC7_1_0.eot');src: url('webfonts/38FAC7_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/38FAC7_1_0.woff2') format('woff2'),url('webfonts/38FAC7_1_0.woff') format('woff'),url('webfonts/38FAC7_1_0.ttf') format('truetype');}
+@font-face {font-family: 'MontrealSerial';font-weight: normal;font-style: italic;src: url('webfonts/38FAC7_2_0.eot');src: url('webfonts/38FAC7_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/38FAC7_2_0.woff2') format('woff2'),url('webfonts/38FAC7_2_0.woff') format('woff'),url('webfonts/38FAC7_2_0.ttf') format('truetype');}
+@font-face {font-family: 'MontrealSerial';font-weight: normal;font-style: normal;src: url('webfonts/38FAC7_3_0.eot');src: url('webfonts/38FAC7_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/38FAC7_3_0.woff2') format('woff2'),url('webfonts/38FAC7_3_0.woff') format('woff'),url('webfonts/38FAC7_3_0.ttf') format('truetype');}
+ 
+body {
+  @apply bg-blue-dark text-blue-lightest text-lg leading-normal;
+  font-family: 'MontrealSerial';
+}
+
+a {
+  @apply text-blue-lightest no-underline border-b-2 border-blue-light;
+}
+a:hover {
+  @apply text-white border-blue-lightest;
+}
+
+b {
+  @apply text-white tracking-wide;
+}
+
+h1 {
+  @apply text-3xl;  
+}
+
+h2 {
+  @apply text-2xl;  
+}
+
+h3 {
+  @apply my-6 block;
+}
+
+h1, h2 {
+  @apply my-6 relative;
+}
+
+h3 {
+  @apply text-xl;  
+}
+
+h1, h2, h3, h4, h5 {
+  @apply text-black uppercase tracking-wide leading-tight;
+}
+
+p, ul {
+  @apply my-6;
+}
+
+ul ul, li {
+  @apply my-3;
+}
+
+p ~ h2, p ~ h3 {
+  @apply mb-0;
+}
+
+h2 ~ p, h3 ~ p {
+  @apply mb-3;
+}
+
+@screen md {
+
+  body {
+    @apply text-xl;
+  }
+  h1 {
+    @apply text-5xl;
+  }
+
+  h2 {
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+
+  h1, h2, h3 {
+    @apply my-6;
+  }
+
+  p, ul, h1, h2 {
+    @apply my-12;
+  }
+  
+  ul ul, li {
+    @apply my-6;
+  }
+  
+  h2 ~ p, h3 ~ p {
+    @apply mb-6;
+  }
+}
+
+h2 {
+  @apply inline-block;
+}
+
+h2:after {
+  content: "";
+  @apply border-b-8 border-blue-light absolute pin-b pin-x;
+}
+
+ul {
+  @apply pl-4;
+}
+
+h2 {
+  @apply uppercase;
+}
+ /**
+  * Here you would add any of your custom component classes; stuff that you'd
+  * want loaded *before* the utilities so that the utilities could still
+  * override them.
+  *
+  * Example:
+  *
+  * .btn { ... }
+  * .form-input { ... }
+  *
+  * Or if using a preprocessor or `postcss-import`:
+  *
+  * @import "components/buttons";
+  * @import "components/forms";
+  */
+ 
+ /**
+  * This injects all of Tailwind's utility classes, generated based on your
+  * config file.
+  *
+  * If using `postcss-import`, use this import instead:
+  *
+  * @import "tailwindcss/utilities";
+  */
+ @tailwind utilities;
+ 
+ /**
+  * Here you would add any custom utilities you need that don't come out of the
+  * box with Tailwind.
+  *
+  * Example :
+  *
+  * .bg-pattern-graph-paper { ... }
+  * .skew-45 { ... }
+  *
+  * Or if using a preprocessor or `postcss-import`:
+  *
+  * @import "utilities/background-patterns";
+  * @import "utilities/skew-transforms";
+  */
+ 

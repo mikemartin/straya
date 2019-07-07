@@ -1,0 +1,9 @@
+{ 
+  "scripts": {
+    "dev": "tailwind build styles.css -c ./tailwind.js -o ./output.css --no-autoprefixer",
+    "deploy": "surge -d straya.surge.sh"
+  },
+  "devDependencies": {
+    "tailwindcss": "^0.7.4"
+  }
+}
